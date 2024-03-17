@@ -1,0 +1,58 @@
+*{
+    margin:0px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+.navbar{
+    position: fixed;
+    top:0;
+    width: 100%;
+    height: 12px;
+    background-color: black;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 3;
+   
+}
+.logo {
+    position: fixed;
+    left: 51px;
+    width: 80px;
+    top: 15px ;
+
+}
+
+.avatar {
+    position: fixed;
+    right: 91px;
+    width: 23px;
+    top: 16px;
+}
+.search {
+    position: fixed;
+    left: 87%;
+    font-size: 20px;
+    top: 16px;
+}
+.search:hover{
+    color: red !important;
+}
+UL{
+    display: flex;
+    justify-content: left;
+    color: white;
+    margin-left: 68px;
+    align-items: center;
+   
+
+}
+li {
+    padding-left: 43px;
+    list-style-type: none;
+    font-size: 13px;
+}
+li:hover{
+  
+    color:red;
+}

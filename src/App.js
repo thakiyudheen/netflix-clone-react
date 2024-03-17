@@ -1,23 +1,30 @@
-import logo from './logo.svg';
+import { useEffect,useState } from 'react';
 import './App.css';
+import NavBar from './components/navbar/NavBar';
+import Banner from './components/banner/Banner';
+import Rowpost from './components/rowpost/Rowpost';
+import axios from './axios'
+import { API_KEY } from './constands/constants';
+import Footer2 from './components/footer/Footer';
+import { Action, Animated, TopRighted, TrendingNow } from './constands/url';
+
+
 
 function App() {
+  
+  // const [TopRighted, setRighted] = useState([])
+  // const [Trending, setTrending] = useState([])
+  // const [Animated, setAnimated] = useState([])
+    
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       <NavBar />
+       <Banner/>
+       <Rowpost title={"TOP RIGHTED"}  movie={TopRighted} />
+       <Rowpost title={"Trendin NOw"}  banner movie={TrendingNow}/>
+       <Rowpost title={"Animation"}  movie={Animated}/>
+       <Rowpost title={"Action"}  movie={Action}/>
+       <Footer2/>
     </div>
   );
 }
